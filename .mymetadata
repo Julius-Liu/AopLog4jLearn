@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project-module
+  type="WEB"
+  name="AopLog4jLearn"
+  id="myeclipse.1459154595605"
+  context-root="/AopLog4jLearn"
+  j2ee-spec="6.0"
+  archive="AopLog4jLearn.war">
+  <attributes>
+    <attribute name="webrootdir" value="WebContent" />
+  </attributes>
+</project-module>
+
