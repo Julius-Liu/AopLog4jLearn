@@ -2,7 +2,6 @@ package com.miao.logon.action;
 
 import java.util.Map;
 
-
 import org.springframework.beans.factory.annotation.Autowired;
 
 import bean.User;
@@ -10,8 +9,6 @@ import bean.User;
 import com.miao.logon.service.LogonService;
 import com.opensymphony.xwork2.ActionContext;
 import com.opensymphony.xwork2.ActionSupport;
-
-
 
 public class LogonAction extends ActionSupport{
 	
@@ -21,18 +18,14 @@ public class LogonAction extends ActionSupport{
 	
 	@Autowired
 	private LogonService logonService;
-
 	
 	@SuppressWarnings({ "rawtypes", "unchecked" })
 	@Override
 	public String execute() throws Exception {
-		
-
 		if(this.getUsername()==null || this.getPassword()==null){
 			this.setReMsg("请输入用户名和密码!");
 			return "logon";
-		}
-		
+		}		
 		
 		User user=logonService.logon(this.getUsername(),this.getPassword());
 		
@@ -47,37 +40,24 @@ public class LogonAction extends ActionSupport{
 		
 		this.setReMsg("用户名或者密码错误！");
 		return "logon";
-	}
-
-	
+	}	
 	
 	public String getUsername() {
 		return username;
 	}
 
-
-
-
 	public void setUsername(String username) {
 		this.username = username;
 	}
 
-
-
-
 	public String getPassword() {
 		return password;
 	}
-
-
-
-
+	
 	public void setPassword(String password) {
 		this.password = password;
 	}
-
-
-
+	
 	public String getReMsg() {
 		return reMsg;
 	}

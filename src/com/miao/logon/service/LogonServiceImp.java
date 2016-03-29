@@ -14,7 +14,7 @@ public class LogonServiceImp implements LogonService {
 	private LogonDao logonDao;
 	
 	@Override
-	public User logon(String username,String password) {
+	public User logon(String username, String password) {
 		return logonDao.logon(username, password);
 	}
 

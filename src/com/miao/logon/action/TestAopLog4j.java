@@ -7,8 +7,8 @@ import com.miao.logon.service.LogonService;
 
 public class TestAopLog4j {
 	public static void main(String args[]){
-		BeanFactory factory = new ClassPathXmlApplicationContext("applicationContext.xml");
+		BeanFactory factory = new ClassPathXmlApplicationContext("config/applicationContext.xml");
 		LogonService logonService = (LogonService)factory.getBean("logonService");
-		logonService.logon("GuoJing", "888888");
+		logonService.logon("Julius", "123456");
 	}
 }	
